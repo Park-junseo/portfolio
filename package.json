@@ -28,7 +28,8 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
     "test": "run-p test:*",
     "test:lint": "eslint .",
-    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
+    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check",
+    "deploy": "next build && touch out/.nojekyll && git add -f out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@fisch0920/use-dark-mode": "^2.4.0",

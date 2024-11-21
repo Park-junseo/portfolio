@@ -8,10 +8,16 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true'
 })
 
+const nextConfig = {
+  output: 'export',
+  basePath: '/Park-junseo.github.io',
+}
+
 export default withBundleAnalyzer({
   staticPageGenerationTimeout: 300,
   images: {
     remotePatterns: [
+      { protocol: 'http', hostname: 'localhost' },
       { protocol: 'https', hostname: 'www.notion.so' },
       { protocol: 'https', hostname: 'notion.so' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
