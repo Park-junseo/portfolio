@@ -408,7 +408,23 @@
   width: 100%;
 }
 
-.notion-h1 {
+.notion-callout-text .notion-h1 {
   width: 100%;
+  display: block;
   text-align: center;
+}
+
+.notion-callout .notion-page-icon-inline.notion-page-icon-span {
+  position: absolute;
+}
+
+.notion-callout {
+  padding:16px;
+}
+
+@media (max-width: 600px) {
+  .notion-callout {
+    padding-left: 6px;
+    padding-right:6px;
+  }
 }
