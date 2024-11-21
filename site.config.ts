@@ -9,17 +9,15 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: '박준서의 포트폴리오',
-  domain: 'localhost',
-  author: '박준서',
+  name: 'Park-Junseo\'s Portfolio',
+  domain: 'next-js-notion',
+  author: 'Junseo Park',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Park-Junseo\'s Portfolio',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  // github: 'Park-junseo',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`

@@ -42,7 +42,4 @@ const analyzer = withBundleAnalyzer({
   transpilePackages: ['react-tweet']
 })
 
-analyzer.output = 'export';
-analyzer.basePath = '/Park-junseo.github.io';
-
 export default analyzer
