@@ -403,3 +403,12 @@
 .notion-equation.notion-equation-block{
   align-items: center;
 }
+
+.notion-simple-table {
+  width: 100%;
+}
+
+.notion-h1 {
+  width: 100%;
+  text-align: center;
+}
