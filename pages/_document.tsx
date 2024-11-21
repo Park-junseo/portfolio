@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
               sizes='32x32'
               href='favicon.png'
             />
+            <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'></link>
 
             <link rel='manifest' href='/manifest.json' />
           </Head>

@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Park-Junseo\'s Portfolio',
-  domain: 'next-js-notion',
+  domain: 'park-junseo.vercel.app',
   author: 'Junseo Park',
 
   // open graph metadata (optional)

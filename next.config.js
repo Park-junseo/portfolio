@@ -16,6 +16,7 @@ const analyzer = withBundleAnalyzer({
       { protocol: 'https', hostname: 'www.notion.so' },
       { protocol: 'https', hostname: 'notion.so' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'palm-red-c5a.notion.site' },
       { protocol: 'https', hostname: 'abs.twimg.com' },
       { protocol: 'https', hostname: 'pbs.twimg.com' },
       { protocol: 'https', hostname: 's3.us-west-2.amazonaws.com' }
