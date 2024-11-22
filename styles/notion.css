@@ -408,7 +408,7 @@
   width: 100%;
 }
 
-.notion-callout-text .notion-h1 {
+.notion-h1, .notion-callout-text .notion-h3 {
   width: 100%;
   display: block;
   text-align: center;
@@ -421,6 +421,10 @@
 .notion-callout {
   padding:16px;
 }
+
+/* .notion-callout.notion-yellow_background_co {
+  background-color: rgb(251 243 219);
+} */
 
 @media (max-width: 600px) {
   .notion-callout {
