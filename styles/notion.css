@@ -422,9 +422,10 @@
   padding:16px;
 }
 
-/* .notion-callout.notion-yellow_background_co {
-  background-color: rgb(251 243 219);
-} */
+.notion-property.notion-property-title .notion-page-title-text {
+  font-size:1.5em;
+  font-weight: 700;
+}
 
 @media (max-width: 600px) {
   .notion-callout {
