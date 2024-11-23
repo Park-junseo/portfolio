@@ -433,3 +433,23 @@
     padding-right:6px;
   }
 }
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeInUp {
+  position: relative;
+  animation: fadeInUp 1s;
+}
