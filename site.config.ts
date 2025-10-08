@@ -41,8 +41,8 @@ export default siteConfig({
   // example:
   //
   // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
+  //   '/foo': 
+  //   '/bar': 
   // }
   pageUrlOverrides: null,
 
@@ -53,11 +53,11 @@ export default siteConfig({
   // navigationLinks: [
   //   {
   //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
+  //     pageId: 
   //   },
   //   {
   //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
+  //     pageId: 
   //   }
   // ]
 })
