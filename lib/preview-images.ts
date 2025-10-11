@@ -9,8 +9,9 @@ import { getPageImageUrls, normalizeUrl } from 'notion-utils'
 import pMap from 'p-map'
 import pMemoize from 'p-memoize'
 
-import { defaultPageCover, defaultPageIcon } from './config'
+import { apiHost, defaultPageCover, defaultPageIcon } from './config'
 import { db } from './db'
+import { getIconParameterDecordingUrlMap } from './get-icon-parameter-decording-url'
 import { mapImageUrl } from './map-image-url'
 
 export async function getPreviewImageMap(
@@ -53,8 +54,30 @@ async function createPreviewImage(
       console.warn(`redis error get "${cacheKey}"`, err.message)
     }
 
-    const body = await ky(url).arrayBuffer()
-    const result = await lqip(body)
+    let result = null;
+    try {
+      const body = await ky(url).arrayBuffer()
+
+      result = await lqip(body)
+    } catch (err: any) {
+
+      try{
+        const lastUuid = getIconParameterDecordingUrlMap(url);
+        if(lastUuid) {
+          url = `${apiHost}/api/webimage/${lastUuid}?prefix=custom_emoji`
+          const body = await ky(url).arrayBuffer()
+          result = await lqip(body)
+        } else {
+          throw err;
+        }
+      } catch (err: any) {
+        console.warn('[custom_emoji] failed to create preview image', url, err.message)
+        result = null;
+      }
+
+      if(result == null) throw err;
+    }
+
     console.log('lqip', { ...result.metadata, url, cacheKey })
 
     const previewImage = {

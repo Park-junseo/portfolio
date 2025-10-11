@@ -39,7 +39,7 @@ async function getAllPagesImpl(
   rootNotionPageId: string,
   rootNotionSpaceId?: string,
   {
-    maxDepth = 1
+    maxDepth = 2
   }: {
     maxDepth?: number
   } = {}
@@ -70,6 +70,7 @@ async function getAllPagesImpl(
       const canonicalPageId = getCanonicalPageId(pageId, recordMap, {
         uuid
       })!
+
 
       if (map[canonicalPageId]) {
         // you can have multiple pages in different collections that have the same id
