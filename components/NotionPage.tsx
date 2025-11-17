@@ -246,6 +246,28 @@ export function NotionPage({
 
   const footer = React.useMemo(() => <Footer />, [])
 
+  React.useEffect(() => {
+    if (!config.isServer) {
+      // add important objects to the window global for easy debugging
+      const g = window as any
+      g.pageId = pageId
+    }
+  }, [pageId])
+
+  React.useEffect(() => {
+    if (!config.isServer) {
+      const g = window as any
+      g.recordMap = recordMap
+    }
+  }, [recordMap])
+
+  React.useEffect(() => {
+    if (!config.isServer) {
+      const g = window as any
+      g.block = block
+    }
+  }, [block])
+
   if (router.isFallback) {
     return <Loading />
   }
@@ -263,14 +285,6 @@ export function NotionPage({
     rootNotionPageId: site.rootNotionPageId,
     recordMap
   })
-
-  if (!config.isServer) {
-    // add important objects to the window global for easy debugging
-    const g = window as any
-    g.pageId = pageId
-    g.recordMap = recordMap
-    g.block = block
-  }
 
   const canonicalPageUrl = config.isDev
     ? undefined
